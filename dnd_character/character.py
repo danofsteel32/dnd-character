@@ -41,14 +41,17 @@ class Character:
         age: Optional[str] = None,
         gender: Optional[str] = None,
         species: Optional[str] = None,
+        race: Optional[str] = None,
         speed: Optional[int] = None,
         alignment: Optional[str] = None,
         description: Optional[str] = None,
         background: Optional[str] = None,
+        lore: Optional[str] = None,
         personality: Optional[str] = None,
         ideals: Optional[str] = None,
         bonds: Optional[str] = None,
         flaws: Optional[str] = None,
+        languages: Optional[str] = None,
         level: Optional[int] = None,
         experience: Union[int, None, Experience] = None,
         wealth: Optional[Union[int, float]] = None,
@@ -116,11 +119,14 @@ class Character:
         self.gender = gender
         self.description = description
         self.background = background
+        self.lore = lore
         self.personality = personality
         self.ideals = ideals
         self.bonds = bonds
         self.flaws = flaws
+        self.languages = languages
         self.species = species
+        self.race = race
         self.speed = 30 if speed is None else int(speed)
         self.player_options = (
             player_options if player_options is not None else {"starting_equipment": []}
