@@ -908,6 +908,6 @@ class Character:
         """
         return (
             hd
-            + ((int(hd / 2) + 1) * (level - 1))
+            + ((int(hd / 2) + 1) * level)
             + Character.get_ability_modifier(constitution)
         )
