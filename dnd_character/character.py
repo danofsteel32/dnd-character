@@ -82,6 +82,7 @@ class Character:
         inventory: Optional[list[dict]] = None,
         prof_bonus: int = 0,
         ability_score_bonus: int = 0,
+        inspiration: int = 0,
         class_features: Optional[dict] = None,
         class_features_enabled: Optional[list] = None,
         spellcasting_stat: Optional[str] = None,
@@ -155,6 +156,7 @@ class Character:
         self._level = 1  # may be increased later in this method
         self.prof_bonus = prof_bonus
         self.ability_score_bonus = ability_score_bonus
+        self.inspiration = inspiration
         self.class_features = class_features if class_features is not None else {}
         self.class_features_enabled = (
             class_features_enabled if class_features_enabled is not None else []
